@@ -82,7 +82,7 @@ while cam.isOpened():
             
             eps = 0.1 * cv2.arcLength(paper, True)
             approx = cv2.approxPolyDP(paper, eps, True)
-            cv2.drawContours(frame, [approx], -1, (102, 126, 234), 3)
+            cv2.drawContours(frame, [approx], -1, (102, 126, 234), 2)
             for p in approx:
                 cv2.circle(frame, tuple(*p), 2, (0, 255, 0), 1)
 
